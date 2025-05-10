@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>نتیجه</title>
+  <style>
+    body {
+      direction: rtl;
+      font-family: 'Vazir', sans-serif;
+      background-color: #fffbe6;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    div {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="result"></div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const age = urlParams.get('age');
+
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `
+      <p>می‌دونم اسمت ${name} و حتی می‌دونم ${age} سالته</p>
+      <p>ولی ${name} جان باور کن این ذره‌ای برام اهمیت نداره</p>
+      <p>تنها چیزی که برام مهمه اینه که بیای کافه ما و یه سری سفارش بدی تا فروش‌مون بیشتر شه آخر ماه چک داریم</p>
+      <p>عشق منی ولی اگه نیای خیلی خری</p>
+      <p>فرپونت برم لازم خودت می‌دونی من هیچ اجباری ندارم لینک پیچمونو برات گذاشتم خواستی بیا نخواستی هم برو سرت لیاقت نداری</p>
+      <p><a href="https://example.com" target="_blank">لینک کافه ما</a></p>
+    `;
+  </script>
+</body>
+</html>
